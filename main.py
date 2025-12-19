@@ -18,3 +18,6 @@ def transcript(video_id: str):
 
     except Exception as e:
         return {"error": str(e)}
+@app.get("/")
+def health():
+    return {"status": "ok"}
